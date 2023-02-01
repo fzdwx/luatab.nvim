@@ -37,4 +37,18 @@ M.extract_highlight_colors = function(color_group, scope)
   return color
 end
 
+M.compose= function(devhl,scope)
+  local color = devhl
+  if color.background ~= nil then
+    color.bg = string.format('#%06x', color.background)
+    color.background = nil
+  end
+  if color.foreground ~= nil then
+    color.fg = string.format('#%06x', color.foreground)
+    color.foreground = nil
+  end
+  if scope then return color[scope] end
+  return color
+end
+
 return M

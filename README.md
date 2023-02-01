@@ -1,37 +1,3 @@
-# luatab.nvim
+# bufferline.nvim
 
-<p align="center">
-  <img src="https://github.com/alvarosevilla95/luatab.nvim/blob/master/pics/tabline.png" />
-</p>
-
-## Features
-* Just a lua rewrite of the tabline render function
-* No weird mixing buffers and tabs stuff
-
-## Install
-Using packer.nvim:
-```
-use { 'alvarosevilla95/luatab.nvim', requires='kyazdani42/nvim-web-devicons' }
-```
-
-## Usage
-Add this to your init.lua:
-```
-require('luatab').setup{}
-```
-
-## Configuration
-
-The plugin calls the `helpers.tabline` function to render the line. It uses the other functions defined in `helpers`, such as `cell,separator,devicon`.
-You can pass overrides for any of these functions in `setup`. Please see `lua/luatab/init.lua` for details.
-
-Example:
-```
-require('luatab').setup{
-    title = function() return '' end,
-    modified = function() return '' end,
-    windowCount = function() return '' end,
-    devicon = function() return '' end,
-    separator = function() return '' end,
-}
-```
+我的分支修改为 `bufferline`
